@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="./create-employee.component.scss">
+
+    </head>
+    <body>
+      <h2 style="background-color: rgb(107, 134, 141); height: 50px; padding: 20px;">Create Employee</h2>
+        
+      <div class="bx-main__create">
+
+        <form (submit)="submitForm()">
+          
+          
+          <input type="text" id="id" placeholder="Id" name="id" [(ngModel)]="employee.id" required><br><br>
+      
+          <input type="text" id="role" placeholder="Role" name="role" [(ngModel)]="employee.role" required><br><br>
+      
+          <input type="text" id="name" placeholder="Name" name="name" [(ngModel)]="employee.name" required><br><br>
+      
+          <input type="number" id="age" placeholder="Age" name="age" [(ngModel)]="employee.age" required><br><br>
+      
+          <label for="dob">Date of Birth : </label><br>
+          <input type="date" id="dob" placeholder="Date of Birth" name="dob" [(ngModel)]="employee.dob" required><br><br>
+
+          <input type="text" id="bloodgroup" placeholder="Blood Group" name="bloodgroup" [(ngModel)]="employee.bloodgroup" required><br><br>
+
+          <input type="text" id="gender" placeholder="Gender" name="gender" [(ngModel)]="employee.gender" required><br><br>
+
+          <input type="email" id="email" placeholder="Email Id" name="email" [(ngModel)]="employee.email" required><br><br>
+      
+          <input type="number" id="number" placeholder="Mobile Number" name="number" [(ngModel)]="employee.number" required><br><br>
+      
+          <label for="image">Upload Image : </label>
+          <input type="file" id="image" name="image" (change)="handleFileInput($event)"><br><br>
+
+      
+          <button type="submit"  class="bx-main__creBtn">Submit</button>
+        </form>
+        <div *ngIf="employees.length > 0">
+          <h3>Employee Details:</h3>
+         
+            
+          <ul>
+            <li *ngFor="let emp of employees">
+             <p>Id :  {{ emp.id }} </p>
+             <p>Name :  {{ emp.name }} </p>
+             <p> Role :  {{ emp.role }} </p>
+             <p> Age : {{emp.age}}  </p>
+             <p> Date of Birth : {{emp.dob}}</p>
+             <p> Blood Group :  {{ emp.bloodgroup }} </p>
+             <p> Gender :  {{ emp.gender }} </p>
+             <p> Email Id :  {{ emp.email }} </p>
+             <p> Mobile Number :  {{ emp.number }} </p>
+             <img *ngIf="selectedFile" [src]="imagePreview" alt="Image Preview" width="200" height="200" style="border: 50%;">
+
+             <hr>
+            </li>
+          </ul>
+         
+        </div>
+          
+      </div>
+        
+    
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./employee-detail.component.scss">
+    </head>
+    <body>
+        
+      <div *ngIf="employeeList && employeeList.length > 0;">
+           
+        <h2 style="background-color: rgb(107, 134, 141); height: 50px; padding: 20px;">Employee Details</h2>
+          
+        <div *ngFor="let employee of employeeList">
+          <div class="bx-main__emp">
+            <div class="bx-main__emp--Det">
+              <p><strong>Id : </strong> {{ employee.id }}</p>
+              <p><strong>Name : </strong> {{ employee.name }}</p>
+              <p><strong>Age : </strong> {{ calculateAge(employee.dateOfBirth) }}</p>
+              <p><strong>Date of Birth : </strong> {{ employee.dateOfBirth | date: 'dd/MM/yyyy' }}</p>
+              <p><strong>Blood Group : </strong> {{ employee.bloodgroup }}</p>
+              <p><strong>Gender : </strong> {{ employee.gender }}</p>
+              <p><strong>Email Id : </strong> {{ employee.email }}</p>
+              <p><strong>Mobile Number : </strong> {{ employee.number }}</p>
+              <p><strong>Leave Details : </strong></p>
+              <p> Leave Status : {{employee.status}}</p>
+              <p> Leave Type : {{employee.leavetype}}</p>
+              <p> Leave Start Date : {{employee.leaveStart}}</p>
+              <p> Leave End Date : {{employee.leaveEnd}}</p>
+              <p> Leave Duration : {{employee.leaveduration}}
+           </div>
+           <div class="bx-main__emp--img">
+              <img *ngIf="employee.imagePath" [src]="employee.imagePath" alt="Employee Image" width="200" height="200" style="border-radius: 50%;">
+           </div>
+         </div>
+
+         <button (click)="deleteEmployee(employee.id)" class="bx-main__delEmp">Delete <span class="material-symbols-outlined">
+          delete
+          </span></button>
+         <hr>
+        </div>
+     </div>
+
+          
+         
+    </body>
+</html> 
+
+

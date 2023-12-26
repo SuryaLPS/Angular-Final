@@ -1,0 +1,24 @@
+{
+  "employees": [
+    {
+      "leaveStatus": "Approved",
+      "id": 1
+    },
+    {
+      "leaveStatus": "Rejected",
+      "id": 2
+    },
+    {
+      "leaveStatus": "Approved",
+      "id": 3
+    },
+    {
+      "leaveStatus": "Rejected",
+      "id": 4
+    },
+    {
+      "leaveStatus": "Approved",
+      "id": 5
+    }
+  ]
+}

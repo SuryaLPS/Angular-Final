@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./hr-dashboard.component.scss">
+    </head>
+    <body>
+
+      <h1>HR Dashboard</h1>
+      <div class="bx-mainSec">
+        <header>
+          <nav>
+            <ul>
+              <li> <a [routerLink]="['/employee-detail']">Employee Details</a></li>
+              <li><a routerLink="/create-employee">Create Employee</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="bx-main__charts">
+           <div class="bx-main__charts--douChart">
+              <canvas id="doughnutChart" width="200" height="200"></canvas>
+           </div>
+  
+           <div class="bx-main__charts--barChart">
+              <canvas id="barChart" width="200" height="200"></canvas>
+           </div>
+         </div>
+         <div class="bx-main__hrTable">
+         <h3><b>Employee Leave Approval</b></h3>
+         <table>
+            <thead>
+              <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Leave Type</th>
+                <th>Leave Start Date</th>
+                <th>Leave End Date</th>
+                <th>Leave Duration</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr *ngFor="let employee of employeeList">
+                <td>{{ employee.id }}</td>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.leaveType }}</td>
+                <td>{{ employee.leaveStart }}</td>
+                <td>{{ employee.leaveEnd }}</td>
+                <td>{{ employee.leaveDuration }}</td>
+                <td>{{ employee.leaveStatus }}</td>
+                <td>
+                  <button *ngIf="employee.leaveStatus === 'Pending'" (click)="approveLeave(employee)" class="bx-main__hrBtn">Approve </button>
+                  <button *ngIf="employee.leaveStatus === 'Pending'" (click)="rejectLeave(employee)" class="bx-main__hrBtn bg1">Reject </button>
+
+                </td>
+
+              </tr>
+            </tbody>
+      
+          </table>
+
+          <button (click)="openAddEmployeeForm()" class="bx-main__addEmp">Add Employee <span class="material-symbols-outlined">
+            person_add
+            </span></button>
+
+          <div *ngIf="showAddEmployeeForm" class="bx-main__hrForm">
+          <h3><b>Add New Employee</b></h3>
+          <form (submit)="addEmployee()">
+           <input type="text" id="employeeId" placeholder="Employee ID" name="employeeId" [(ngModel)]="newEmployee.id" required><br><br>
+
+           <input type="text" id="employeeName" placeholder="Employee Name" name="employeeName" [(ngModel)]="newEmployee.name" required><br><br>
+
+           <input type="text" id="leaveType" placeholder="Leave Type" name="leaveType" [(ngModel)]="newEmployee.leaveType" required><br><br>
+
+           <label for="leaveStart">Leave Start Date : </label><br>
+           <input type="date" id="leaveStart" name="leaveStart" [(ngModel)]="newEmployee.leaveStart" required><br><br>
+       
+           <label for="leaveEnd">Leave End Date : </label><br>
+           <input type="date" id="leaveEnd" name="leaveEnd" [(ngModel)]="newEmployee.leaveEnd" required><br><br>
+
+           <input type="number" id="leaveDuration" placeholder="Leave Duration " name="leaveDuration" [(ngModel)]="newEmployee.leaveDuration" required><br><br>
+
+           <button type="submit" class="bx-main__hrBtn bg3">Submit</button>
+          </form>
+
+        </div>
+  
+  
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+body {
+    background-image: url(/assets/Images/bg-emp-det.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin: 20px;
+   
+}
+.bx-applicationForm{
+    margin: 0px auto;
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      margin: 0 auto;
+      // color: white;
+
+  
+      label {
+        margin-bottom: 8px;
+      }
+  
+      input,
+      textarea {
+        margin-bottom: 16px;
+        height: 30px;
+        background-color: transparent;
+        // color: white;
+        // border: 2px solid white;
+      }
+  
+      button {
+        background-color: rgb(9, 168, 9);
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color:  #09ec28;
+      }
+    }
+  }
+  

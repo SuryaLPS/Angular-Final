@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./employee-dashboard.component.scss">
+    </head>
+    <body>
+      <h1>Employee Dashboard</h1>
+      <header>
+        <nav>
+          <ul class="bx-mainSec__ul">
+            <li> <a [routerLink]="['/leave-details']">Leave Details</a></li>
+            <li> <a [routerLink]="['/leave-application']">Leave Application</a></li>
+          </ul>
+        </nav>
+     </header>
+
+     <div class="bx-mainSec">
+          
+        <div *ngIf="employees.length > 0; else noData">
+          <h2 style="background-color: rgb(107, 134, 141); height: 50px; padding: 20px;">Employee Details</h2>
+            
+          <ul style="list-style: none;">
+            <li *ngFor="let emp of employees">
+              <p>Id :  {{ emp.id }} </p>
+              <p>Name: {{ emp.name }} </p>
+              <p>Role: {{ emp.role }} </p>
+              <p>Age: {{ emp.age }}</p>
+              <p>Date of Birth: {{ emp.dob }}</p>
+              <p>Blood Group: {{ emp.bloodgroup }} </p>
+              <p>Gender: {{ emp.gender }} </p>
+              <p>Email Id: {{ emp.email }} </p>
+              <p>Mobile Number: {{ emp.number }} </p>
+              <img *ngIf="emp.image" [src]="emp.image" alt="Employee Image" width="200" height="200" style="border: 50%;">
+                 
+              <button (click)="editEmployee(emp)" class="bx-mainSec__edit">Edit <span class="material-symbols-outlined">
+                edit
+                </span></button>
+              <hr>
+            </li>
+          </ul>
+        </div>
+            
+        <ng-template #noData>
+          <p>No employee data available.</p>
+        </ng-template>
+      </div>
+
+    </body>
+</html>

@@ -1,0 +1,42 @@
+body {
+    background-image: url(/assets/Images/bg-emp-det.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    
+
+}
+.bx-main__create {
+    margin: 0 auto;
+    padding: 20px;
+
+
+    input {
+        width: 300px;
+        height: 30px;
+        background-color: transparent;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0 auto;
+
+    }
+}
+
+.bx-main__creBtn {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    width: 300px;
+    height: 30px;
+        
+
+}
+ .bx-main__creBtn:hover {
+    background-color: rgb(12, 223, 12);
+    color: black;
+
+}
+

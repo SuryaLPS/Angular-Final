@@ -1,0 +1,137 @@
+body {
+    background-image: url(/assets/Images/bg-hr.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+   
+}
+.bx-mainSec {
+    padding: 50px;
+
+    header {
+        display: flex;
+        justify-content: right;
+        height: 50px;
+        padding: 20px;
+
+      
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+
+        a {
+            text-decoration: none;
+           color:royalblue;
+           font-weight: bolder;
+          margin: 50px;
+        }
+        a:hover {
+            color: gray;
+        }
+    }
+}
+.bx-main__charts {
+    display: flex;
+  width: 800px;
+    height: auto;
+    margin: 0 auto;
+    
+
+
+    &--douChart {
+        width: 50%;
+        height: auto;
+        margin: 30px;
+      
+    }
+
+    &--barChart {
+        width: 50%;
+        height: auto;
+        margin: 30px;
+
+      
+    }
+   
+
+}
+.bx-main__hrTable {
+    width: 1110px; 
+    height: auto;
+    margin: 0 auto;
+   
+    table {
+        padding: 10px;
+        margin: 10px;
+
+        th {
+            padding: 20px;
+            background-color: lightblue;
+        }
+        
+
+        td {
+            height: 30px;
+        }
+        
+    }
+    .bx-main__hrBtn {
+        background-color: green;
+        color: white;
+        cursor: pointer;
+        width: 80px;
+        height: 30px;
+        
+
+    }
+    .bx-main__hrBtn:hover {
+        background-color: rgb(12, 223, 12);
+        color: black;
+
+        
+    }
+    .bg1 {
+        background-color: rgb(231, 120, 120);
+        color: black;
+    }
+    .bg1:hover {
+        background-color: red;
+        color: white;
+
+
+    }
+}
+.bx-main__addEmp {
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(63, 112, 218);
+    color: white;
+    
+    
+}
+.bx-main__addEmp:hover {
+    background-color: rgb(29, 8, 221);
+}
+.bx-main__hrForm {
+    text-align: center;
+
+    input {
+        width: 300px;
+        height: 30px;
+        background-color: transparent;
+        text-align: center;
+        align-items: center;
+    }
+    label {
+        margin: 20px;
+    }
+.bg3 {
+    width: 300px;
+ 
+}
+   
+}

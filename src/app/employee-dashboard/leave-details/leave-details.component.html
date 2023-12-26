@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="leave-details.component.scss">
+    </head>
+    <body>
+     <h2 style="background-color: rgb(107, 134, 141); height: 50px; padding: 20px;">Leave Details</h2>
+      <div class="bx-main__emp">
+        <div class="bx-main__emp__Table">
+          <table>
+            <thead>
+              <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Leave Type</th>
+                <th>Leave Start Date</th>
+                <th>Leave End Date</th>
+                <th>Leave Duration</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of employeeList">
+                <td>{{ employee.id }}</td>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.leaveType }}</td>
+                <td>{{ employee.leaveStart }}</td>
+                <td>{{ employee.leaveEnd }}</td>
+                <td>{{ employee.leaveDuration }}</td>
+                <td>{{ employee.leaveStatus }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </body>
+</html>

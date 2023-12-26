@@ -1,0 +1,34 @@
+body {
+    background-image: url(/assets/Images/bg-emp-det.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+   
+}
+.bx-main__emp{
+    margin: 0 auto;
+
+
+   &__Table {
+    width: 1110px; 
+    height: 800px;
+    margin: 0 auto;
+   
+      table {
+        padding: 10px;
+        margin: 10px;
+
+          th {
+            padding: 20px;
+         }
+        
+
+          td {
+            height: 30px;
+          }
+        
+        }
+
+    } 
+}

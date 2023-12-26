@@ -1,0 +1,55 @@
+  body {
+        background-image: url(/assets/Images/bg-em1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+       
+    }
+    
+header {
+    display: flex;
+    height: 50px;
+    padding: 20px;
+    
+    a {
+        text-decoration: none;
+       color:royalblue;
+       font-weight: bolder;
+      margin: 50px;
+    }
+    a:hover {
+        color: gray;
+    }
+}
+.bx-mainSec {
+    background-image: url(/assets/Images/bg-emp-det.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 0px;
+
+    
+    &__ul {
+        display: flex;
+        list-style: none;
+    }
+
+    &__edit { 
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+        background-color: rgb(63, 112, 218);
+        color: white;
+    }
+    &__edit:hover {
+         
+            background-color: rgb(29, 8, 221);
+        
+    }
+
+    
+
+    
+}

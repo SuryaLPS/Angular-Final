@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./edit-profile.component.scss">
+    </head>
+    <body>
+
+      <form (submit)="updateProfile()" [formGroup]="editForm">
+
+        <label for="id">Id : </label>
+        <input type="text" id="id" name="Id" formControlName="id" required><br><br>
+  
+        <label for="role">Role : </label>
+        <input type="text" id="role" name="role" formControlName="role" required><br><br>
+  
+        <label for="name">Name : </label>
+        <input type="text" id="name" name="name" formControlName="name" required><br><br>
+  
+        <label for="age">Age : </label>
+        <input type="number" id="age" name="age" formControlName="age" required><br><br>
+  
+        <label for="dob">Date of Birth : </label>
+        <input type="date" id="dob" name="dob" formControlName="dob" required><br><br>
+  
+        <label for="bloodgroup">Blood Group : </label>
+        <input type="text" id="bloodgroup" name="bloodgroup" formControlName="bloodgroup" required><br><br>
+  
+        <label for="gender">Gender : </label>
+        <input type="text" id="gender" name="gender" formControlName="gender" required><br><br>
+  
+        <label for="email">Email Id : </label>
+        <input type="email" id="email" name="email" formControlName="email" required><br><br>
+  
+        <label for="number">Mobile Number : </label>
+        <input type="number" id="number" name="number" formControlName="number" required><br><br>
+  
+  
+        <button type="submit" class="bx-EditBtn">Update <span class="material-symbols-outlined">
+          update
+          </span></button>
+      </form>
+
+      
+  
+    </body>
+</html>
